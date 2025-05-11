@@ -1,7 +1,7 @@
 local MacLib = loadstring(game:HttpGet("https://github.com/biggaboy212/Maclib/releases/latest/download/maclib.txt"))()
 
 local Window = MacLib:Window({
-	Title = "Kaltaris HUBHUB",
+	Title = "Kaltaris HUB",
 	Subtitle = "By Kaltaris.",
 	Size = UDim2.fromOffset(868, 650),
 	DragStyle = 1,
@@ -99,7 +99,7 @@ local NameSize = 14
 local TeamCheckEnabled = false
 local NameColor = Color3.fromRGB(255, 255, 255)
 local SelectedFont = Enum.Font.SourceSansBold
-local YOffset = 5 -- Giá trị dương để hiển thị trên đầu
+local YOffset = 6 -- Giá trị dương để hiển thị trên đầu
 
 local fontOptions = {
     "SourceSans",
@@ -522,7 +522,7 @@ sections.Esp2Section1:Toggle({
                     currentWidth + (targetWidth - currentWidth) * 0.1,
                     barHeight - padding * 2
                 )
-                healthBar.Position = Vector2.new(containerPos.X + padding, containerPos.Y + padding)
+                healthBar.Position = Vector2.new(containerPos.X + padding, containerPos.Y - 5)
                 healthBar.Visible = true
 
                 glowEffect.Size = Vector2.new(healthBar.Size.X, 2)
@@ -533,7 +533,7 @@ sections.Esp2Section1:Toggle({
                 healthText.Text = healthPercent .. "%"
                 healthText.Position = Vector2.new(
                     containerPos.X - 2,
-                    containerPos.Y - 500
+                    containerPos.Y - 200
                 )
                 healthText.Visible = true
             end
