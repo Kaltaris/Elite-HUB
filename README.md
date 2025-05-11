@@ -500,7 +500,7 @@ sections.Esp2Section1:Toggle({
                 end
 
                 local barWidth = 65
-                local barHeight = 6
+                local barHeight = 8
                 local padding = 2
                 local health = humanoid.Health / humanoid.MaxHealth
                 local healthPercent = math.floor(health * 100)
