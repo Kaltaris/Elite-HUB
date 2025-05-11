@@ -57,7 +57,7 @@ local tabGroups = {
 local tabs = {
 	Main = tabGroups.TabGroup1:Tab({ Name = "Thông báo Update", Image = "rbxassetid://81478297548754" }),
 	Esp = tabGroups.TabGroup1:Tab({ Name = "EspPlayer", Image = "rbxassetid://84727577248856" }),
-		EspM = tabGroups.TabGroup1:Tab({ Name = "EspM", Image = "rbxassetid://84727577248856" }),
+	EspM = tabGroups.TabGroup1:Tab({ Name = "EspM", Image = "rbxassetid://84727577248856" }),
 	Aim = tabGroups.TabGroup1:Tab({ Name = "Aimbot", Image = "rbxassetid://130939958971532" }),
 	Uni = tabGroups.TabGroup1:Tab({ Name = "Visual", Image = "rbxassetid://122760395538267" }),
 	Pla = tabGroups.TabGroup1:Tab({ Name = "Player", Image = "rbxassetid://122760395538267" }),
@@ -99,7 +99,7 @@ local NameSize = 14
 local TeamCheckEnabled = false
 local NameColor = Color3.fromRGB(255, 255, 255)
 local SelectedFont = Enum.Font.SourceSansBold
-local YOffset = 3 -- Giá trị dương để hiển thị trên đầu
+local YOffset = 4 -- Giá trị dương để hiển thị trên đầu
 
 local fontOptions = {
     "SourceSans",
@@ -1839,54 +1839,7 @@ sections.ShaSection1:Toggle({
         end
         
         Window:Notify({
-            Title = Window.Settings.Title
-        })
-    end
-}, "Toggle")
-------------------------------------------------------
-sections.UniSection1:Header({
-	Name = "Universal"
-})
--- Phiên bản bypass anti-cheat cơ bản
-local speedEnabled = false
-local speedValue = 50
-
--- Bypass basic anti-cheat
-local mt = getrawmetatable(game)
-setreadonly(mt, false)
-local old = mt.__namecall
-mt.__namecall = newcclosure(function(...)
-    local args = {...}
-    local method = getnamecallmethod()
-    
-    if method == "FireServer" or method == "InvokeServer" then
-        -- Chặn các remote events liên quan đến speed/movement
-        if args[1] == "WalkSpeed" or args[1] == "Speed" or args[1] == "CheckSpeed" then
-            return
-        end
-    end
-    return old(...)
-end)
-setreadonly(mt, true)
-
--- Sử dụng CFrame movement thay vì WalkSpeed
-local function speedBypass()
-    if speedEnabled and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-        local humanoidRootPart = player.Character.HumanoidRootPart
-        local moveDirection = player.Character.Humanoid.MoveDirection
-        
-        if moveDirection.Magnitude > 0 then
-            -- Tăng hệ số chia để giảm độ nhạy của tốc độ cao
-            humanoidRootPart.CFrame = humanoidRootPart.CFrame + moveDirection * (speedValue/1000)
-        end
-    end
-end
-
-RunService.Heartbeat:Connect(speedBypass)
-
-sections.UniSection1:Toggle({
-    Name = "Speed Hack",
-    Default = false,
+           true,
     Callback = function(value)
         speedEnabled = value
         Window:Notify({
@@ -1900,7 +1853,7 @@ sections.UniSection1:Slider({
     Name = "Tốc Độ Speed",
     Default = 50,
     Minimum = 16,
-    Maximum = 5000, -- Đã tăng maximum lên 5000
+    Maximum = 10000, -- Đã tăng maximum lên 5000
     DisplayMethod = "Value",
     Precision = 0,
     Callback = function(Value)
@@ -2042,7 +1995,7 @@ end)
 
 sections.Uni2Section1:Toggle({
     Name = "Nhảy Liên Tục",
-    Default = false,
+    Default = true,
     Callback = function(value)
         infiniteJumpEnabled = value
         Window:Notify({
@@ -4206,7 +4159,7 @@ sections.MainSection1:Label({
 })
 
 sections.MainSection1:SubLabel({
-	Text = "Ui Mac share và được thêm những chức năng tự code độc quyền."
+	Text = "Ui Mac share và được thêm những chức năng copy độc quyền."
 })
 
 MacLib:SetFolder("Maclib")
