@@ -2,7 +2,7 @@ local MacLib = loadstring(game:HttpGet("https://github.com/biggaboy212/Maclib/re
 
 local Window = MacLib:Window({
 	Title = "Nesux X MacUI",
-	Subtitle = "Bởi Muori Bản Trả Phí.",
+	Subtitle = "By Kaltaris.",
 	Size = UDim2.fromOffset(868, 650),
 	DragStyle = 1,
 	DisabledWindowControls = {},
@@ -55,7 +55,7 @@ local tabGroups = {
 }
 
 local tabs = {
-	Main = tabGroups.TabGroup1:Tab({ Name = "Thông báo Update", Image = "rbxassetid://81478297548754" }),
+	Main = tabGroups.TabGroup1:Tab({ Name = "EspPlayer", Image = "rbxassetid://84727577248856" }),
 	Esp = tabGroups.TabGroup1:Tab({ Name = "EspPlayer", Image = "rbxassetid://84727577248856" }),
 	EspM = tabGroups.TabGroup1:Tab({ Name = "EspM", Image = "rbxassetid://84727577248856" }),
   
