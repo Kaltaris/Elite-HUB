@@ -1,8 +1,8 @@
 local MacLib = loadstring(game:HttpGet("https://github.com/biggaboy212/Maclib/releases/latest/download/maclib.txt"))()
 
 local Window = MacLib:Window({
-	Title = "Hub Nhà Làm",
-	Subtitle = "By Kaltaris.",
+	Title = "Nesux X MacUI",
+	Subtitle = "Bởi Muori Bản Trả Phí.",
 	Size = UDim2.fromOffset(868, 650),
 	DragStyle = 1,
 	DisabledWindowControls = {},
@@ -99,7 +99,7 @@ local NameSize = 14
 local TeamCheckEnabled = false
 local NameColor = Color3.fromRGB(255, 255, 255)
 local SelectedFont = Enum.Font.SourceSansBold
-local YOffset = 3 -- Giá trị dương để hiển thị trên đầu
+local YOffset = 4 -- Giá trị dương để hiển thị trên đầu
 
 local fontOptions = {
     "SourceSans",
@@ -1987,7 +1987,7 @@ sections.UniSection1:Slider({
     Name = "Sức Nhảy",
     Default = 50,
     Minimum = 50,
-    Maximum = 10000, -- Tăng maximum lên 5000
+    Maximum = 5000, -- Tăng maximum lên 5000
     DisplayMethod = "Value",
     Precision = 0,
     Callback = function(Value)
@@ -4184,7 +4184,7 @@ end)
 sections.MainSection1:Divider()
 
 sections.Main2Section1:Header({
-	Text = "!"
+	Text = "•1Ngày - 3.000 •3Ngày - 9.000 •7Ngày - 18.000 •1Tháng - 69.000!"
 })
 
 sections.MainSection1:Header({
