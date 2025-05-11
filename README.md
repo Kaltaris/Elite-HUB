@@ -522,18 +522,18 @@ sections.Esp2Section1:Toggle({
                     currentWidth + (targetWidth - currentWidth) * 0.1,
                     barHeight - padding * 2
                 )
-                healthBar.Position = Vector2.new(containerPos.X + padding, containerPos.Y - 50)
+                healthBar.Position = Vector2.new(containerPos.X + padding, containerPos.Y - 100)
                 healthBar.Visible = true
 
                 glowEffect.Size = Vector2.new(healthBar.Size.X, 2)
-                glowEffect.Position = Vector2.new(containerPos.X + padding, containerPos.Y)
+                glowEffect.Position = Vector2.new(containerPos.X + padding, containerPos.Y - 100)
                 glowEffect.Visible = true
 
                 local textVerticalOffset = 15
                 healthText.Text = healthPercent .. "%"
                 healthText.Position = Vector2.new(
                     containerPos.X - 2,
-                    containerPos.Y - 50
+                    containerPos.Y - 100
                 )
                 healthText.Visible = true
             end
