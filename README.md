@@ -533,7 +533,7 @@ sections.Esp2Section1:Toggle({
                 healthText.Text = healthPercent .. "%"
                 healthText.Position = Vector2.new(
                     containerPos.X - 2,
-                    containerPos.Y - textVerticalOffset
+                    containerPos.Y - 3,
                 )
                 healthText.Visible = true
             end
