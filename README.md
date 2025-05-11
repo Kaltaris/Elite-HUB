@@ -91,7 +91,7 @@ local player = Players.LocalPlayer
 local VirtualUser = game:GetService("VirtualUser")
 ------------------------------------------------------------------------------------------------------------
 sections.EspSection1:Header({
-	Name = "ESP Tên Người Chơi"
+	Name = "Hiện Tên Người Chơi"
 })
 
 local ShowNamesEnabled = false
@@ -99,7 +99,7 @@ local NameSize = 14
 local TeamCheckEnabled = false
 local NameColor = Color3.fromRGB(255, 255, 255)
 local SelectedFont = Enum.Font.SourceSansBold
-local YOffset = 6 -- Giá trị dương để hiển thị trên đầu
+local YOffset = 4 -- Giá trị dương để hiển thị trên đầu
 
 local fontOptions = {
     "SourceSans",
@@ -522,18 +522,18 @@ sections.Esp2Section1:Toggle({
                     currentWidth + (targetWidth - currentWidth) * 0.1,
                     barHeight - padding * 2
                 )
-                healthBar.Position = Vector2.new(containerPos.X + padding, containerPos.Y - 100)
+                healthBar.Position = Vector2.new(containerPos.X + padding, containerPos.Y + padding)
                 healthBar.Visible = true
 
                 glowEffect.Size = Vector2.new(healthBar.Size.X, 2)
-                glowEffect.Position = Vector2.new(containerPos.X + padding, containerPos.Y - 100)
+                glowEffect.Position = Vector2.new(containerPos.X + padding, containerPos.Y)
                 glowEffect.Visible = true
 
                 local textVerticalOffset = 15
                 healthText.Text = healthPercent .. "%"
                 healthText.Position = Vector2.new(
                     containerPos.X - 2,
-                    containerPos.Y - 100
+                    containerPos.Y - textVerticalOffset
                 )
                 healthText.Visible = true
             end
