@@ -57,9 +57,8 @@ local tabGroups = {
 local tabs = {
 	Main = tabGroups.TabGroup1:Tab({ Name = "Thông báo Update", Image = "rbxassetid://81478297548754" }),
 	Esp = tabGroups.TabGroup1:Tab({ Name = "EspPlayer", Image = "rbxassetid://84727577248856" }),
-	EspM = tabGroups.TabGroup1:Tab({ Name = "EspM", Image = "rbxassetid://84727577248856" }),
 	Aim = tabGroups.TabGroup1:Tab({ Name = "Aimbot", Image = "rbxassetid://130939958971532" }),
-	Uni = tabGroups.TabGroup1:Tab({ Name = "Visual", Image = "rbxassetid://122760395538267" }),
+	Uni = tabGroups.TabGroup1:Tab({ Name = "Movement", Image = "rbxassetid://122760395538267" }),
 	Pla = tabGroups.TabGroup1:Tab({ Name = "Player", Image = "rbxassetid://122760395538267" }),
 	Sha = tabGroups.TabGroup1:Tab({ Name = "Đồ họa", Image = "rbxassetid://87916652848972" }),
 	Settings = tabGroups.TabGroup1:Tab({ Name = "Cài đặt", Image = "rbxassetid://75791170485208" })
