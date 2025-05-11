@@ -1987,7 +1987,7 @@ sections.UniSection1:Slider({
     Name = "Sức Nhảy",
     Default = 50,
     Minimum = 50,
-    Maximum = 5000, -- Tăng maximum lên 5000
+    Maximum = 10000, -- Tăng maximum lên 5000
     DisplayMethod = "Value",
     Precision = 0,
     Callback = function(Value)
