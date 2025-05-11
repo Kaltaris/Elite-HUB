@@ -1,7 +1,7 @@
 local MacLib = loadstring(game:HttpGet("https://github.com/biggaboy212/Maclib/releases/latest/download/maclib.txt"))()
 
 local Window = MacLib:Window({
-	Title = "Nesux X MacUI",
+	Title = "Kaltaris HUBHUB",
 	Subtitle = "By Kaltaris.",
 	Size = UDim2.fromOffset(868, 650),
 	DragStyle = 1,
@@ -99,7 +99,7 @@ local NameSize = 14
 local TeamCheckEnabled = false
 local NameColor = Color3.fromRGB(255, 255, 255)
 local SelectedFont = Enum.Font.SourceSansBold
-local YOffset = 4 -- Giá trị dương để hiển thị trên đầu
+local YOffset = 5 -- Giá trị dương để hiển thị trên đầu
 
 local fontOptions = {
     "SourceSans",
@@ -533,7 +533,7 @@ sections.Esp2Section1:Toggle({
                 healthText.Text = healthPercent .. "%"
                 healthText.Position = Vector2.new(
                     containerPos.X - 2,
-                    containerPos.Y - 3
+                    containerPos.Y - 6
                 )
                 healthText.Visible = true
             end
