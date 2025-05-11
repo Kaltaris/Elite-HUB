@@ -57,8 +57,8 @@ local tabGroups = {
 local tabs = {
 	Main = tabGroups.TabGroup1:Tab({ Name = "Thông báo Update", Image = "rbxassetid://81478297548754" }),
 	Esp = tabGroups.TabGroup1:Tab({ Name = "EspPlayer", Image = "rbxassetid://84727577248856" }),
-		EspM = tabGroups.TabGroup1:Tab({ Name = "EspM", Image = "rbxassetid://84727577248856" }),
-	Aim = tabGroups.TabGroup1:Tab({ Name = "Aimbot", Image = "rbxassetid://130939958971532" }),
+	EspM = tabGroups.TabGroup1:Tab({ Name = "EspM", Image = "rbxassetid://84727577248856" }),
+  
 	Uni = tabGroups.TabGroup1:Tab({ Name = "Visual", Image = "rbxassetid://122760395538267" }),
 	Pla = tabGroups.TabGroup1:Tab({ Name = "Player", Image = "rbxassetid://122760395538267" }),
 	Sha = tabGroups.TabGroup1:Tab({ Name = "Đồ họa", Image = "rbxassetid://87916652848972" }),
@@ -94,12 +94,12 @@ sections.EspSection1:Header({
 	Name = "ESP Tên Người Chơi"
 })
 
-local ShowNamesEnabled = false
+local ShowNamesEnabled = true
 local NameSize = 14
 local TeamCheckEnabled = false
 local NameColor = Color3.fromRGB(255, 255, 255)
 local SelectedFont = Enum.Font.SourceSansBold
-local YOffset = 3 -- Giá trị dương để hiển thị trên đầu
+local YOffset = 4 -- Giá trị dương để hiển thị trên đầu
 
 local fontOptions = {
     "SourceSans",
